@@ -1,4 +1,9 @@
 import { SwaggerOptions } from "swagger-ui-express";
+import dotenv from "dotenv";
+
+dotenv.config()
+
+const port=process.env.PORT || "8080"
 
 const swaggerDocs: SwaggerOptions = {
   openapi: "3.0.0",
@@ -9,7 +14,7 @@ const swaggerDocs: SwaggerOptions = {
   },
   servers: [
     {
-      url: "http://localhost:8080",
+      url: "http://localhost:"+port,
     },
   ],
   paths: {
@@ -98,12 +103,12 @@ const swaggerDocs: SwaggerOptions = {
               "application/json": {
                 schema: {
                   type: "object",
-                  properties: {
-                    id: { type: "string" },
-                    email: { type: "string" },
-                    age: { type: "integer" },
-                    name: { type: "string" },
-                  },
+                    properties: {
+                      id: { type: "string" },
+                      email: { type: "string" },
+                      age: { type: "integer" },
+                      name: { type: "string" },
+                    },
                 },
               },
             },
