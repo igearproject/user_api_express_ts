@@ -13,7 +13,7 @@ yarn-error.log*
 # Build outputs
 /dist
 /build
-/**/*.js
+# /**/*.js
 /**/*.js.map
 
 # TypeScript
