@@ -19,7 +19,7 @@ const getOneUser = async (req: Request, res: Response): Promise<any> => {
     });
   }
   return res.json({
-    data: null,
+    data: user,
     messsage: "User not found",
   });
 };
@@ -32,6 +32,10 @@ const createUser = async (req: Request, res: Response): Promise<any> => {
       email,
       age,
     });
+    return res.status(201).json({
+      data: user,
+      messsage: "Successfully created user",
+    });
   } catch (error) {
     return res.status(500).json({
       data: null,
@@ -39,10 +43,7 @@ const createUser = async (req: Request, res: Response): Promise<any> => {
     });
   }
 
-  return res.status(201).json({
-    data: null,
-    messsage: "Successfully created user",
-  });
+  
 };
 
 const updateUser = async (req: Request, res: Response): Promise<any> => {
