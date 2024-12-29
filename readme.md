@@ -1,6 +1,8 @@
 # User API Express TypeScript
 
-This is a guide to set up and run the **User API Express TypeScript** project on another computer.
+This is a simple API developed using the Express.js framework, TypeScript programming language, and MySQL database. It comes with comprehensive documentation, a logging system to track activities, and unit tests to ensure code quality.
+
+This is a guide to set up and run the **User API Express TypeScript**:
 
 ## Prerequisites
 
@@ -64,6 +66,8 @@ cp example.env .env
 Edit the `.env` file to configure the environment variables (e.g., database connection details):
 
 ```bash
+PORT=3000
+
 DB_NAME=database_name
 DB_USERNAME=root
 DB_PASSWORD=password_db
